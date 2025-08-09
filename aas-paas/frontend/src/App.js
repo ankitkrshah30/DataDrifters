@@ -26,8 +26,10 @@ function App() {
 
         try {
             const response = await identifyImage(selectedFile);
-            // The backend sends back a JSON string, so we need to parse it
-            const parsedResult = JSON.parse(response.data);
+            
+            // The response.data is ALREADY an object, no need to parse it again.
+            const parsedResult = response.data; 
+            
             setResult(parsedResult);
         } catch (err) {
             console.error(err);
