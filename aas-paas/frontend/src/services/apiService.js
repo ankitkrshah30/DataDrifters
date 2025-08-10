@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // IMPORTANT: This URL will be updated later when we deploy the backend
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'https://aas-paas-backend.onrender.com/api';
 
 export const identifyImage = (file) => {
     const formData = new FormData();
