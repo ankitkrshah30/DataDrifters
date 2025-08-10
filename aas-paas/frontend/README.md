@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Aaas Paas AI-dentifier Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based frontend application that allows users to analyze images of local businesses and surroundings using AI-powered image recognition.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 🖼️ Multiple Input Methods
 
-### `npm start`
+1. **File Upload**: Traditional file selection from your device
+2. **Camera Capture**: Take photos directly using your device's camera
+3. **Paste from Clipboard**: Paste images copied from other applications
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📱 Camera Functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Real-time Camera Access**: Opens your device's camera for live preview
+- **High-Quality Capture**: Captures photos at optimal resolution
+- **Back Camera Priority**: Automatically uses the back camera when available
+- **Easy Controls**: Simple capture and cancel buttons
 
-### `npm test`
+### 📋 Paste Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Universal Paste Support**: Works with images copied from any source
+- **Keyboard Shortcut**: Use Ctrl+V (or Cmd+V on Mac) to paste images
+- **Instant Recognition**: Automatically detects pasted image content
 
-### `npm run build`
+### 🎯 Image Analysis
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **AI-Powered Recognition**: Uses Gemini API for intelligent image analysis
+- **Business Type Detection**: Identifies the type of business or location
+- **Detailed Descriptions**: Provides comprehensive analysis of the image
+- **Smart Tagging**: Generates relevant tags for easy categorization
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Camera Mode
+1. Click the "📷 Camera" tab
+2. Click "📷 Open Camera" to start your camera
+3. Position your device to capture the desired image
+4. Click "📸 Capture Photo" to take the picture
+5. The captured image will be ready for analysis
 
-### `npm run eject`
+### Paste Mode
+1. Click the "📋 Paste Image" tab
+2. Copy an image from any application (right-click → Copy)
+3. Use Ctrl+V (or Cmd+V) to paste the image
+4. The pasted image will be ready for analysis
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Upload Mode
+1. Click the "📁 Upload Image" tab
+2. Click "Choose an image file" to browse your device
+3. Select an image file and it will be ready for analysis
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Analysis
+1. After selecting an image through any method, click "🔍 Analyze Image"
+2. Wait for the AI analysis to complete
+3. View the detailed results including business type, description, and tags
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technical Details
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React 18+**: Built with modern React features
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Camera API**: Uses `navigator.mediaDevices.getUserMedia()` for camera access
+- **Clipboard API**: Leverages browser clipboard functionality for paste support
+- **Canvas API**: Uses HTML5 Canvas for image capture and processing
 
-## Learn More
+## Browser Compatibility
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Chrome**: Full support for all features
+- **Firefox**: Full support for all features
+- **Safari**: Full support for all features
+- **Edge**: Full support for all features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Camera Permissions
 
-### Code Splitting
+The application requires camera access permissions to use the camera functionality. Users will be prompted to allow camera access when they first try to use the camera feature.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Development
 
-### Analyzing the Bundle Size
+To run the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+The app will open in your browser at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Building for Production
 
-### Advanced Configuration
+To create a production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React 18+
+- Axios for API communication
+- Modern CSS with responsive design
